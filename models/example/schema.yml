@@ -1,8 +1,7 @@
-
 version: 2
 
 models:
-    - name: dbt_analytics
+    - name: dbt_analytics_1  # Changed to a unique name
       description: "A starter dbt model"
       columns:
           - name: id
@@ -11,8 +10,8 @@ models:
                 - unique
                 - not_null
 
-    - name: dbt_analytics
-      description: "A starter dbt model"
+    - name: dbt_analytics_2  # Changed to a unique name
+      description: "Another starter dbt model"
       columns:
           - name: id
             description: "The primary key for this table"
