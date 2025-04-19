@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: cancelled_bookings  # The name of your model (matches the SQL filename without .sql)
+    description: "Aggregated cancelled bookings data"
+    columns:
+      - name: OrderDate
+        description: "The date of the order"
+        tests:
+          - not_null
+      - name: Cancelled_BookingValue
+        description: "The total value of cancelled bookings for the order date"
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 100, 200, 300]  # Example values to check for
