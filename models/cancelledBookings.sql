@@ -1,8 +1,0 @@
--- models/cancelledBookings.sql
-{{ config(materialized='table') }}
-
-SELECT 
-    *
-FROM 
-    `silken-zenith-378617.booking.bookings`
-WHERE IsCancelled=1
